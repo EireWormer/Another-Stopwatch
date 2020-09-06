@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/timer_hour_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/timer_tab_hours"
+            app:layout_constraintBottom_toTopOf="@+id/time_picker_constraint"
+            app:layout_constraintEnd_toStartOf="@+id/timer_min_label" />
+
+        <TextView
+            android:id="@+id/timer_min_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/timer_tab_minutes"
+            app:layout_constraintBottom_toTopOf="@+id/time_picker_constraint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/timer_sec_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/timer_tab_seconds"
+            app:layout_constraintBottom_toTopOf="@+id/time_picker_constraint"
+            app:layout_constraintStart_toEndOf="@+id/timer_min_label" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/time_picker_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/start_button_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#1A000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/timer_hour_picker"
+                android:layout_width="30dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="10dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:theme="@style/NumberPickerText"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:text="@string/colon"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp"
+                app:layout_constraintEnd_toStartOf="@+id/timer_min_picker"
+                app:layout_constraintStart_toEndOf="@+id/timer_hour_picker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/timer_min_picker"
+                android:layout_width="30dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:theme="@style/NumberPickerText"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/stopwatch_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:text="@string/colon"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp"
+                app:layout_constraintEnd_toStartOf="@+id/timer_sec_picker"
+                app:layout_constraintStart_toEndOf="@+id/timer_min_picker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/timer_sec_picker"
+                android:layout_width="30dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="75dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:theme="@style/NumberPickerText"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#1A000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="PxUsage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/start_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#1A000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="PxUsage" />
+
+            <Button
+                android:id="@+id/timer_tab_cancel"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_tab_cancel"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/timer_tab_start"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_tab_start"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/timer_contdown_display"
+            android:layout_width="265dp"
+            android:layout_height="54dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.424" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

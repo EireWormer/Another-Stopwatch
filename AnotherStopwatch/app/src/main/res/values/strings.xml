@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Another Stopwatch</string>
+    <string name="tab_1_title">Alarm</string>
+    <string name="tab_2_title">Stopwatch</string>
+    <string name="tab_3_title">Timer</string>
+    <string name="timer_tab_hours">Hours</string>
+    <string name="timer_tab_minutes">Minutes</string>
+    <string name="timer_tab_seconds">Seconds</string>
+    <string name="timer_tab_start">START</string>
+    <string name="timer_tab_cancel">CANCEL</string>
+    <string name="colon">:</string>
+    <string name="stopwatch_tab_lap">LAP</string>
+    <string name="stopwatch_tab_stop">STOP</string>
+    <string name="stopwatch_tab_reset">RESET</string>
+    <string name="stopwatch_tab_resume">RESUME</string>
+    <string name="stopwatch_tab_pause">PAUSE</string>
+    <string name="fab_content_desc">Create new alarm</string>
+    <string name="alarm_tab_noalams">No alarms set</string>
+</resources>
